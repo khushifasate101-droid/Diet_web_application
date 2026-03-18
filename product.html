@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Product List</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
+}
+
+body{
+    display:flex;
+    background:#eef2f7;
+}
+
+/* SIDEBAR */
+.sidebar{
+    width:240px;
+    height:100vh;
+    background:#fff;
+    padding:20px;
+    border-right:1px solid #ddd;
+}
+
+.sidebar h3{
+    color:#888;
+    margin-bottom:20px;
+}
+
+.master{
+    background:#4b4bb7;
+    color:#fff;
+    border-radius:10px;
+    padding:15px;
+}
+
+.master ul{
+    list-style:none;
+    margin-top:10px;
+}
+
+.master li{
+    padding:8px 0;
+    font-size:14px;
+}
+
+.menu{
+    list-style:none;
+    margin-top:20px;
+}
+
+.menu li{
+    padding:12px 5px;
+    color:#555;
+    cursor:pointer;
+}
+
+.menu li:hover{
+    background:#eee;
+}
+
+/* MAIN */
+.main{
+    flex:1;
+    padding:40px;
+}
+
+.main h1{
+    text-align:center;
+    margin-bottom:20px;
+    color:#333;
+}
+
+/* TABLE */
+.table-container{
+    background:#fff;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 4px 15px rgba(0,0,0,0.1);
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+th{
+    background:#2f3542;
+    color:#fff;
+    padding:15px;
+    text-align:center;
+}
+
+td{
+    padding:15px;
+    text-align:center;
+    border-bottom:1px solid #eee;
+}
+
+tr:nth-child(even){
+    background:#f9f9f9;
+}
+
+/* IMAGE */
+.product-img{
+    width:45px;
+    height:45px;
+    border-radius:50%;
+    object-fit:cover;
+}
+
+/* BUTTONS */
+.edit{
+    background:#f39c12;
+    border:none;
+    padding:6px 12px;
+    border-radius:6px;
+    color:#fff;
+    cursor:pointer;
+    margin-right:5px;
+}
+
+.delete{
+    background:#e74c3c;
+    border:none;
+    padding:6px 12px;
+    border-radius:6px;
+    color:#fff;
+    cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+
+<!-- SIDEBAR -->
+<div class="sidebar">
+    <h3>DASHBOARD</h3>
+
+    <div class="master">
+        <strong>MASTER</strong>
+        <ul>
+            <li>Add category</li>
+            <li>List of product</li>
+            <li>Add product</li>
+        </ul>
+    </div>
+
+    <ul class="menu">
+        <li>SALE</li>
+        <li>MESSAGE</li>
+        <li>CUSTOMER</li>
+        <li>PRODUCT</li>
+        <li>ORDER STATUS</li>
+        <li>LOG OUT</li>
+    </ul>
+</div>
+
+<!-- MAIN -->
+<div class="main">
+    <h1>Product</h1>
+
+    <div class="table-container">
+        <table>
+            <tr>
+                <th>Product ID</th>
+                <th>Product Name</th>
+                <th>Category Name</th>
+                <th>Product Image</th>
+                <th>Actions</th>
+            </tr>
+
+            <tr>
+                <td>46</td>
+                <td>Mass Gainer Shake</td>
+                <td>Under weight (below 50 kg)</td>
+                <td>
+                    <img class="product-img" src="https://images.pexels.com/photos/5938/food-salad-healthy-lunch.jpg">
+                </td>
+                <td>
+                    <button class="edit">Edit</button>
+                    <button class="delete">Delete</button>
+                </td>
+            </tr>
+
+            <tr>
+                <td>47</td>
+                <td>Peanut Butter Protein Bars</td>
+                <td>Under weight (below 50 kg)</td>
+                <td>
+                    <img class="product-img" src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092?w=100">
+                </td>
+                <td>
+                    <button class="edit">Edit</button>
+                    <button class="delete">Delete</button>
+                </td>
+            </tr>
+
+            <tr>
+                <td>48</td>
+                <td>Dry Fruits Combo Pack</td>
+                <td>Under weight (below 50 kg)</td>
+                <td>
+                    <img class="product-img" src="https://images.unsplash.com/photo-1615485290382-441e4d049cb5?w=100">
+                </td>
+                <td>
+                    <button class="edit">Edit</button>
+                    <button class="delete">Delete</button>
+                </td>
+            </tr>
+
+            <tr>
+                <td>49</td>
+                <td>Greek Yogurt with Honey</td>
+                <td>Under weight (below 50 kg)</td>
+                <td>
+                    <img class="product-img" src="https://images.unsplash.com/photo-1551024601-bec78aea704b?w=100">
+                </td>
+                <td>
+                    <button class="edit">Edit</button>
+                    <button class="delete">Delete</button>
+                </td>
+            </tr>
+
+            <tr>
+                <td>50</td>
+                <td>Oats & Banana Smoothie Mix</td>
+                <td>Under weight (below 50 kg)</td>
+                <td>
+                    <img class="product-img" src="https://images.pexels.com/photos/775031/pexels-photo-775031.jpeg">
+                <td>
+                    <button class="edit">Edit</button>
+                    <button class="delete">Delete</button>
+                </td>
+            </tr>
+
+        </table>
+    </div>
+
+</div>
+
+
+</body>
+</html>

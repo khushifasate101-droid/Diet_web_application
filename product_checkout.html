@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Cart</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
+}
+
+body{
+    display:flex;
+    background:#eef2f7;
+}
+
+/* SIDEBAR */
+.sidebar{
+    width:240px;
+    height:100vh;
+    background:#fff;
+    padding:20px;
+    border-right:1px solid #ddd;
+}
+
+.sidebar h3{
+    color:#888;
+    margin-bottom:20px;
+}
+
+.active-box{
+    background:#4b4bb7;
+    color:#fff;
+    border-radius:10px;
+    padding:15px;
+}
+
+.active-box ul{
+    list-style:none;
+    margin-top:10px;
+}
+
+.active-box li{
+    padding:8px 0;
+    font-size:14px;
+}
+
+.menu{
+    list-style:none;
+    margin-top:20px;
+}
+
+.menu li{
+    padding:12px 5px;
+    color:#555;
+    cursor:pointer;
+}
+
+.menu li:hover{
+    background:#eee;
+}
+
+/* MAIN */
+.main{
+    flex:1;
+    padding:40px;
+}
+
+.main h2{
+    text-align:center;
+    margin-bottom:20px;
+}
+
+/* CARD CONTAINER */
+.cart-box{
+    background:#fff;
+    border-radius:15px;
+    padding:20px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* TABLE */
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+th{
+    background:#2f3542;
+    color:#fff;
+    padding:15px;
+}
+
+td{
+    padding:15px;
+    text-align:center;
+    border-bottom:1px solid #eee;
+}
+
+tr:nth-child(even){
+    background:#f9f9f9;
+}
+
+/* IMAGE */
+.product-img{
+    width:45px;
+    height:45px;
+    border-radius:50%;
+    object-fit:cover;
+}
+
+/* BUTTON */
+.remove-btn{
+    background:#e74c3c;
+    color:#fff;
+    border:none;
+    padding:6px 15px;
+    border-radius:6px;
+    cursor:pointer;
+}
+
+/* TOTAL ROW */
+.total{
+    text-align:right;
+    font-weight:bold;
+}
+
+/* CHECKOUT BUTTON */
+.checkout{
+    display:flex;
+    justify-content:center;
+    margin-top:20px;
+}
+
+.checkout button{
+    background:#4b4bb7;
+    color:#fff;
+    border:none;
+    padding:12px 30px;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:16px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- SIDEBAR -->
+<div class="sidebar">
+    <h3>DASHBOARD</h3>
+
+    <div class="active-box">
+        <strong>MY CART</strong>
+        <ul>
+            <li>All cart</li>
+        </ul>
+    </div>
+
+    <ul class="menu">
+        <li>ALL PRODUCT</li>
+        <li>STATUS</li>
+        <li>BUY</li>
+        <li>FEEDBACK</li>
+        <li>LOG OUT</li>
+    </ul>
+</div>
+
+<!-- MAIN -->
+<div class="main">
+    <h2>PRODUCT</h2>
+
+    <div class="cart-box">
+
+        <table>
+            <tr>
+                <th>Product_id</th>
+                <th>Product Image</th>
+                <th>Quantity</th>
+                <th>Added At</th>
+                <th>Actions</th>
+            </tr>
+
+            <tr>
+                <td>46</td>
+                <td>
+                    <img class="product-img" src="https://images.pexels.com/photos/5938/food-salad-healthy-lunch.jpg">
+                </td>
+                <td>1</td>
+                <td>₹250.00</td>
+                <td>
+                    <button class="remove-btn">Remove</button>
+                </td>
+            </tr>
+
+            <!-- TOTAL ROW -->
+            <tr>
+                <td colspan="4" class="total">Total Price:</td>
+                <td>₹250.00</td>
+            </tr>
+        </table>
+
+        <!-- CHECKOUT -->
+        <div class="checkout">
+            <button>Proceed to Checkout</button>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
