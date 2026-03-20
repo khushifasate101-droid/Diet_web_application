@@ -40,5 +40,6 @@ The website shows basic information about diet plans, healthy food, and lifestyl
 📖 Reference
 
 Based on research paper: Diet Web Application
+[Link:https://ijarsct.co.in/Paper25493.pdf]
 
 ---
